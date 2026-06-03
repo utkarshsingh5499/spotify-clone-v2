@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <meta name="description" content="Spotify style music dashboard clone built with HTML, CSS, and JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-dot"></div>
+        <span>Spotify Clone</span>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active" type="button">Home</button>
+        <button class="menu-item" type="button">Search</button>
+        <button class="menu-item" type="button">Your Library</button>
+      </nav>
+
+      <section class="playlists">
+        <h2>Your Playlists</h2>
+        <ul id="playlistList"></ul>
+      </section>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <input id="searchInput" type="text" placeholder="Search songs, artists, albums">
+        <div class="profile-pill">Open to Work</div>
+      </header>
+
+      <section class="hero">
+        <p class="hero-tag">Fresh Mix</p>
+        <h1>Daily Frontend Flow</h1>
+        <p>Focus tracks for building, shipping, and learning.</p>
+      </section>
+
+      <section class="cards-section">
+        <h2>Made For You</h2>
+        <div id="cardGrid" class="card-grid"></div>
+      </section>
+
+      <section class="tracks-section">
+        <div class="section-head">
+          <h2>Tracks</h2>
+          <p id="resultCount">0 songs</p>
+        </div>
+        <div class="track-table-wrap">
+          <table class="track-table" aria-label="Track list">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="trackBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="player">
+    <div class="now-playing">
+      <p class="label">Now Playing</p>
+      <h3 id="nowPlayingTitle">Select a track</h3>
+      <p id="nowPlayingArtist">Artist name</p>
+    </div>
+
+    <div class="controls">
+      <div class="transport">
+        <button id="prevBtn" type="button">Prev</button>
+        <button id="playPauseBtn" type="button">Play</button>
+        <button id="nextBtn" type="button">Next</button>
+      </div>
+      <div class="seek-row">
+        <span id="currentTime">0:00</span>
+        <input id="seekBar" type="range" min="0" max="100" value="0" aria-label="Track progress">
+        <span id="totalTime">0:00</span>
+      </div>
+    </div>
+
+    <div class="volume">
+      <label for="volumeBar">Volume</label>
+      <input id="volumeBar" type="range" min="0" max="100" value="70">
+      <p id="volumeValue">70%</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
