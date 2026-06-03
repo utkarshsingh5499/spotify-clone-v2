@@ -44,7 +44,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
 
       <div className="layout">
@@ -73,7 +73,7 @@ function App() {
         playNextSong={playNextSong}
         playPreviousSong={playPreviousSong}
       />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
